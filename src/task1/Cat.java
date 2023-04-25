@@ -74,7 +74,15 @@ final class Cat {
     {
         return c1.name.compareTo(c2.name);
     }
+    public boolean isColor(String inputColor)
+    {
+        return String.valueOf(color).equals(inputColor);
+    }
 
+    public boolean isEqual5()
+    {
+        return name.length()==5;
+    }
 
     /*********/
 }

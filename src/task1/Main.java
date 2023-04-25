@@ -1,5 +1,7 @@
 package task1;
 
+import java.util.Locale;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -20,6 +22,13 @@ public class Main {
         System.out.println("Sorted by Name:");
         cats.sort(Cat::byName);
         Printer.print(cats);
+        System.out.println("Deleted by Color:");
+        String c="GINGER";
+        cats.removeIf(Cat-> Cat.isColor(c.toUpperCase(Locale.ROOT)));
+        Printer.print(cats);
+        System.out.println("Deleted by length==5:");
+        cats.removeIf(Cat::isEqual5);
+        Printer.print(cats); 
     }
 
 }
