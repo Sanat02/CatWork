@@ -60,8 +60,21 @@ final class Cat {
 
     /*********/
 
-    // Ваш код может находится здесь
-    // остальную часть этого файла вы менять не можете
+    public static int byAge(Cat c1,Cat c2)
+    {
+        return c1.age- c2.age;
+    }
+    public static int byBreed(Cat c1,Cat c2)
+    {
+        String s= String.valueOf(c1.breed);
+        String s2=String.valueOf(c2.breed);
+        return s.compareTo(s2);
+    }
+    public static int byName(Cat c1,Cat c2)
+    {
+        return c1.name.compareTo(c2.name);
+    }
+
 
     /*********/
 }
